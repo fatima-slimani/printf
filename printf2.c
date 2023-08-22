@@ -2,10 +2,15 @@
 
 result_t *printf_string(const char *input, va_list *list)
 {
+	char *str;
+
 	input = (char *)tag(input, "s");
 	if (!input)
 		return (NULL);
-	return (new_result(input, _putstr(va_arg(*list, char *))));
+	str = va_arg(*list, char *);
+	if (!str)
+		str = "(null)";
+	return (new_result(input, _putstr(str)));
 }
 
 result_t *printf_char(const char *input, va_list *list)
