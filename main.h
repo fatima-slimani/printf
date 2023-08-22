@@ -33,6 +33,14 @@ result_t *printf_char(const char *input, va_list *list);
 result_t *printf_percent(const char *input, va_list *list);
 result_t *printf_terminator(const char *input, va_list *list);
 result_t *printf_space(const char *input, va_list *list);
+result_t *printf_int(const char *input, va_list *list);
+result_t *printf_inti(const char *input, va_list *list);
+result_t *printf_uint(const char *input, va_list *list);
+result_t *printf_binary(const char *input, va_list *list);
+result_t *printf_octal(const char *input, va_list *list);
+result_t *printf_hexa(const char *input, va_list *list);
+result_t *printf_heXa(const char *input, va_list *list);
+result_t *printf_asci(const char *input, va_list *list);
 
 
 /* utils */

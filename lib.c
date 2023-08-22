@@ -37,6 +37,14 @@ result_t *printf_formatted(const char *input, va_list *list)
 		printf_string,
 		printf_char,
 		printf_percent,
+		printf_int,
+		printf_inti,
+		printf_uint,
+		printf_binary,
+		printf_octal,
+		printf_hexa,
+		printf_heXa,
+		printf_asci,
 		NULL};
 	i = 0;
 
