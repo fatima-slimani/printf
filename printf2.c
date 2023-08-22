@@ -15,7 +15,7 @@ result_t *printf_string(const char *input, va_list *list)
 		return (NULL);
 	str = va_arg(*list, char *);
 	if (!str)
-		str = "(null)";
+		str = "NULL";
 	return (new_result(input, _putstr(str)));
 }
 

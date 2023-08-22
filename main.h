@@ -1,6 +1,8 @@
 #ifndef LIB_H
 #define LIB_H
 
+#include <limits.h>
+#include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -25,14 +27,17 @@ typedef result_t *printf_fn(const char *input, va_list *list);
 int _printf(const char *format, ...);
 
 result_t *new_result(const char *output, int length);
+result_t *printf_formatted(const char *input, va_list *list);
 result_t *printf_string(const char *input, va_list *list);
 result_t *printf_char(const char *input, va_list *list);
 result_t *printf_percent(const char *input, va_list *list);
+result_t *printf_terminator(const char *input, va_list *list);
+result_t *printf_space(const char *input, va_list *list);
+
 
 /* utils */
 #define isdigit(d) ((d) >= '0' && (d) <= '9')
 #define Ctod(c) ((c) - '0')
-#define INT_MAX 2147483647
 #define MAXBUF (sizeof(long int) * 8) /* enough for binary */
 
 /* parsing */

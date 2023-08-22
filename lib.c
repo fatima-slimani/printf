@@ -32,6 +32,8 @@ result_t *printf_formatted(const char *input, va_list *list)
 	result_t *result;
 	int i;
 	printf_fn * formatters[] = {
+		printf_space,
+		printf_terminator,
 		printf_string,
 		printf_char,
 		printf_percent,
@@ -61,6 +63,8 @@ int _doprintf(const char *fmt, va_list *list)
 	int length;
 	result_t *result;
 
+	if (!fmt)
+		return (-1);
 	length = 0;
 	while (*fmt)
 	{
@@ -76,6 +80,11 @@ int _doprintf(const char *fmt, va_list *list)
 			result = printf_formatted(fmt, list);
 			if (result)
 			{
+				if (result->length == -1)
+				{
+					free(result);
+					return (-1);
+				}
 				fmt = result->output;
 				length += result->length;
 				free(result);
