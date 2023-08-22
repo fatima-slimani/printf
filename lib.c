@@ -1,5 +1,6 @@
 #include "main.h"
-result_t *new_result(char *output, int length)
+
+result_t *new_result(const char *output, int length)
 {
 	result_t *result;
 
@@ -7,7 +8,7 @@ result_t *new_result(char *output, int length)
 	if (!result)
 		return (NULL);
 
-	result->output = output;
+	result->output = (char *) output;
 	result->length = length;
 	return (result);
 }

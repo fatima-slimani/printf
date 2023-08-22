@@ -13,7 +13,7 @@ int _putchar(char c)
 
 int _putstr(const char *input)
 {
-	char *current;
+	const char *current;
 
 	current = input;
 	while (*current != '\0')

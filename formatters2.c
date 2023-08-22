@@ -1,3 +1,5 @@
+#include "main.h"
+
 int _putoctal(unsigned int n)
 {
 	int count = 0;
@@ -25,7 +27,7 @@ int _puthexa(unsigned int n, int uppercase)
 
 int _putAsci(const char *input)
 {
-	char *current;
+	const char *current;
 
 	current = input;
 	while (*current != '\0')

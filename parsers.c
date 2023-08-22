@@ -16,7 +16,7 @@ char *take(const char *input, int length)
 	if (length > 0)
 		return (NULL);
 
-	return (input);
+	return ((char *)input);
 }
 /**
  * take_while - take characters while a predicate is true
@@ -29,8 +29,8 @@ char *take_while(const char *input, predicate_t predicate)
 	while (*input != '\0' && predicate(*input))
 		input++;
 
-	return (input);
-};
+	return ((char *)input);
+}
 
 /**
  * tag - recognize a pattern in a string
@@ -50,8 +50,8 @@ char *tag(const char *input, const char *pattern)
 	if (*pattern != '\0')
 		return (NULL);
 
-	return (input);
-};
+	return ((char *)input);
+}
 
 /**
  * take_till - take characters until a character is found
@@ -67,5 +67,5 @@ char *take_till(const char *input, char c)
 	if (*input != c)
 		return (NULL);
 
-	return (input);
-};
+	return ((char *)input);
+}
