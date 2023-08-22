@@ -15,7 +15,7 @@ typedef struct result_t
 
 typedef result_t *printf_fn(const char *input, va_list *list);
 
-int _printf(const char *fmt, ...);
+int _printf(const char *format, ...);
 
 result_t *new_result(const char *output, int length);
 result_t *printf_string(const char *input, va_list *list);

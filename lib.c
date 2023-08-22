@@ -70,13 +70,13 @@ int _doprintf(const char *fmt, va_list *list)
  * returns: number of characters printed excluding
  * the null byte used to end output to strings
  */
-int _printf(const char *fmt, ...)
+int _printf(const char *format, ...)
 {
 	va_list list;
 	int done;
 
-	va_start(list, fmt);
-	done = _doprintf(fmt, &list);
+	va_start(list, format);
+	done = _doprintf(format, &list);
 	va_end(list);
 
 	return (done);
