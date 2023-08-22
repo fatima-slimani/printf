@@ -4,7 +4,7 @@
  * take - take a number of characters
  * @input: string to check
  * @length: number of characters to take
- * returns: pointer to the end of the found string otherwise NULL
+ * Return: pointer to the end of the found string otherwise NULL
  */
 char *take(const char *input, int length)
 {
@@ -22,7 +22,7 @@ char *take(const char *input, int length)
  * take_while - take characters while a predicate is true
  * @input: string to check
  * @predicate: function to check
- * returns: pointer to the end of the found string
+ * Return: pointer to the end of the found string
  */
 char *take_while(const char *input, predicate_t predicate)
 {
@@ -37,7 +37,7 @@ char *take_while(const char *input, predicate_t predicate)
  * @input: string to check
  * @pattern: string to compare
  *
- * Returns: pointer to the end of the found pattern otherwise NULL
+ * Return: pointer to the end of the found pattern otherwise NULL
  */
 char *tag(const char *input, const char *pattern)
 {
@@ -57,7 +57,7 @@ char *tag(const char *input, const char *pattern)
  * take_till - take characters until a character is found
  * @input: string to check
  * @c: character to check
- * returns: pointer to the end of the found string otherwise NULL
+ * Return: pointer to the end of the found string otherwise NULL
  */
 char *take_till(const char *input, char c)
 {

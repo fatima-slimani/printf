@@ -7,6 +7,13 @@
 
 #define NULL ((void *)0)
 
+/**
+ * struct result_t - result of formatting
+ * @output: new pointer
+ * @length: printed length
+ *
+ * Description: this returned by formatter
+ */
 typedef struct result_t
 {
 	char *output;

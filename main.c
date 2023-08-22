@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 
+/**
+ * main - the program
+ * Return: On success return 0,
+ */
 int main(void)
 {
 	int len;

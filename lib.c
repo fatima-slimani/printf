@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * new_result - create new result from pointer and length
+ * @output: the result pointer
+ * @length: the result length
+ * Return: On success return the result,
+ * else return NULL
+ */
 result_t *new_result(const char *output, int length)
 {
 	result_t *result;
@@ -13,7 +20,13 @@ result_t *new_result(const char *output, int length)
 	return (result);
 }
 
-
+/**
+ * printf_formatted - wrapper to all formatters
+ * @input: the formatted text
+ * @list: the va list
+ * Return: On success return the result,
+ * else return NULL
+ */
 result_t *printf_formatted(const char *input, va_list *list)
 {
 	result_t *result;
@@ -36,6 +49,13 @@ result_t *printf_formatted(const char *input, va_list *list)
 	return (result);
 }
 
+/**
+ * _doprintf - wrapper to all formatters and charachters printer
+ * @fmt: the formatted text
+ * @list: the va list
+ * Return: On success return the result,
+ * else return NULL
+ */
 int _doprintf(const char *fmt, va_list *list)
 {
 	int length;
@@ -67,7 +87,8 @@ int _doprintf(const char *fmt, va_list *list)
 
 /**
  * _printf - prints a string with format
- * returns: number of characters printed excluding
+ * @format: the formatted text
+ * Return: number of characters printed excluding
  * the null byte used to end output to strings
  */
 int _printf(const char *format, ...)

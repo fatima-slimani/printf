@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _putoctal - writes the number n as octal to stdout
+ * @n: The number to print
+ *
+ * Return: On success return the length of n.
+ */
 int _putoctal(unsigned int n)
 {
 	int count = 0;
@@ -10,6 +16,12 @@ int _putoctal(unsigned int n)
 	return (count + 1);
 }
 
+/**
+ * _puthexa - writes the number n as hexa to stdout
+ * @n: The number to print
+ * @uppercase: if 1 print number as uppercase
+ * Return: On success return the length of n.
+ */
 int _puthexa(unsigned int n, int uppercase)
 {
 	int count = 0;
@@ -25,6 +37,13 @@ int _puthexa(unsigned int n, int uppercase)
 	return (count + 1);
 }
 
+
+/**
+ * _putAsci - writes characters as asci to stdout
+ * @input: The characters to print
+ *
+ * Return: On success return the length of input.
+ */
 int _putAsci(const char *input)
 {
 	const char *current;

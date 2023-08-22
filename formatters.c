@@ -11,6 +11,12 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
+/**
+ * _putstr - writes the string input to stdout
+ * @input: The string to print
+ *
+ * Return: On success return the length of input.
+ */
 int _putstr(const char *input)
 {
 	const char *current;
@@ -23,6 +29,14 @@ int _putstr(const char *input)
 	}
 	return (current - input);
 }
+
+
+/**
+ * _putint - writes the number n to stdout
+ * @n: The number to print
+ *
+ * Return: On success return the length of n.
+ */
 int _putint(int n)
 {
 	int count = 0;
@@ -39,6 +53,12 @@ int _putint(int n)
 	return (count + 1);
 }
 
+/**
+ * _putuint - writes the number n to stdout
+ * @n: The number to print
+ *
+ * Return: On success return the length of n.
+ */
 int _putuint(unsigned int n)
 {
 	int count = 0;
@@ -48,6 +68,13 @@ int _putuint(unsigned int n)
 	_putchar(n % 10 + '0');
 	return (count + 1);
 }
+
+/**
+ * _putbinary - writes the number n as binary to stdout
+ * @n: The number to print
+ *
+ * Return: On success return the length of n.
+ */
 int _putbinary(unsigned int n)
 {
 	int count = 0;
